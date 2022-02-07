@@ -1,0 +1,213 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    height: 100%;
+    justify-content: center;
+}
+
+th, td {
+    padding: 15px;
+}
+
+/* ---- For home page ---- */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 75%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.btn {
+    font-size: 1em;
+    color: #fff;
+    background: #468c6a;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    width: 180px;
+}
+
+.btn-red {
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    width: 180px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    letter-spacing: 4px;
+    background: #e37029;
+    color: white;
+}
+
+.btn-red:hover {
+    letter-spacing: 4px;
+    color: white;
+    background: #6e4b7a;
+}
+
+.btn-group {
+    float:left;
+}
+
+.small-btn-1 {
+    font-size: 15px;
+    color: #fff;
+    background: #3c9951;
+    text-align: center;
+    margin: 3px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    width: 120px;
+    border-radius: 4px;
+}
+
+.small-btn-1:hover {
+    color: #fff;
+    background: #ff0157;
+}
+
+.small-btn-2 {
+    font-size: 15px;
+    color: #fff;
+    background: #b83939;
+    text-align: center;
+    margin: 3px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    width: 120px;
+    border-radius: 4px;
+}
+
+    .small-btn-2:hover {
+        color: #fff;
+        background: #291e1e;
+    }
+/* ---- For login page ---- */
+.login-container {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+}
+.login-left-container {
+    flex: 1;
+    border-radius: 50px 0px 0px 50px;
+    height: 420px;
+    background- center;
+    background-repeat: no-repeat;
+    background-image: url('../../images/login-bg1.jpg');
+}
+
+.login-right-container {
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 20px;
+    width: 50%;
+    height: 420px;
+    border-radius: 0px 50px 50px 0px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 0.2);
+}
+
+.login-btn {
+    float: right;
+}
+
+/* Assign full width inputs*/
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 40px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+/* Set a style for the buttons*/
+button {
+    background-color: #60D078;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    border-radius: 25px;
+}
+
+    /* Set a hover effect for the button*/
+    button:hover {
+        opacity: 0.8;
+    }
+
+/* Set extra style for the cancel button*/
+.container {
+    padding: 16px;
+}
+
+.fontuser {
+    position: relative;
+
+}
+
+    .fontuser i {
+        position: absolute;
+        left: 15px;
+        top: 45px;
+        color: gray;
+    }
+
+.fontpassword {
+    position: relative;
+}
+
+    .fontpassword i {
+        position: absolute;
+        left: 15px;
+        top: 45px;
+        color: gray;
+    }
+
+.create-form {
+    width: 800px;
+}

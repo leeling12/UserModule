@@ -1,0 +1,123 @@
+﻿@model UserModule.Models.User
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <table class="create-form">
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="EmployeeId" class="control-label"></label>
+                            <input asp-for="EmployeeId" class="form-control" readonly />
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Username" class="control-label"></label>
+                            <input asp-for="Username" class="form-control" readonly />
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Fullname" class="control-label"></label>
+                            <input asp-for="Fullname" class="form-control" />
+                            <span asp-validation-for="Fullname" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Password" class="control-label"></label>
+                            <input asp-for="Password" class="form-control" type="password" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="ConfirmPassword" class="control-label"></label>
+                            <input asp-for="ConfirmPassword" class="form-control" type="password" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="JoinDate" class="control-label"></label>
+                            <input asp-for="JoinDate" class="form-control" />
+                            <span asp-validation-for="JoinDate" class="text-danger"></span>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="PositionRefId" class="control-label"></label>
+                            <select asp-for="PositionRefId" class="form-control" asp-items="ViewBag.PositionRefId"></select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="TeamRefId" class="control-label"></label>
+                            <select asp-for="TeamRefId" class="form-control" asp-items="ViewBag.TeamRefId"></select>
+                        </div>
+                    </td>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="StatusRefId" class="control-label"></label>
+                            <select asp-for="StatusRefId" class="form-control" asp-items="ViewBag.StatusRefId"></select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <label asp-for="SecurityPhrase" class="control-label"></label>
+                            <input asp-for="SecurityPhrase" class="form-control" />
+                            <span asp-validation-for="SecurityPhrase" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+
+            <div class="btn-group">
+                <input type="submit" value="Save" class="btn" />
+                <a asp-action="Index" asp-controller="User" class="btn-red">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
